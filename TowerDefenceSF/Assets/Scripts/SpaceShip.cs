@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TowerDefence;
 using UnityEngine;
 
 namespace SpaceShooter
@@ -129,6 +131,7 @@ namespace SpaceShooter
             return;
         }
 
+
         /*
         #region Offensive
 
@@ -214,6 +217,13 @@ namespace SpaceShooter
         }
         
         */
+
+
+        public void Use(EnemyAsset asset)
+        {
+            m_MaxLinearVelocity = asset.moveSpeed;
+            base.Use(asset);
+        }
 
     }
 }

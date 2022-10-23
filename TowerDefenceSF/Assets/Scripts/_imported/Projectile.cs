@@ -32,12 +32,12 @@ namespace SpaceShooter
                 if (dest != null && dest != m_Parent)
                 {
                     dest.ApplyDamage(m_Damage);
-
+                    /*
                     if (m_Parent == Player.Instance.ActiveShip)
                     {
                         Player.Instance.AddScore(dest.ScoreValue);
                     }
-
+                    */
                 }
 
                 OnProjectileLifeEnd(hit.collider, hit.point);
@@ -64,5 +64,6 @@ namespace SpaceShooter
         {
             m_Parent = parent;
         }
+
     }
 }
